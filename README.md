@@ -5,14 +5,17 @@ A futuristic digital distribution and marketing platform showcasing the musical 
 ## Features
 
 - **3D EDM Festival Stage**: Interactive Three.js concert stage with animated lights synced to kick drum (120 BPM)
+- **Latest Tracks Page**: Showcase newest releases with download functionality
 - **Futuristic Design**: Cyberpunk-inspired aesthetics with neon colors and smooth animations
 - **Sound Design Showcase**: Highlighting cinematic, game audio, and experimental sound work
 - **ETU 2175 OST**: Dedicated section for the Explore the Universe 2175 original soundtrack
 - **Eros Trilogy**: Complete showcase of Eros albums I, II, and III
 - **Interactive Audio Player**: Built-in player with modern controls
+- **External Project Links**: Direct connections to Explore the Universe 2175 game, blog, and Telford Projects
 - **Responsive Design**: Optimized for all devices
 - **Smooth Animations**: Powered by Framer Motion for engaging interactions
 - **Projection Screen**: Central stage screen with animated text and pulsing effects
+- **Download Tracks**: Direct download buttons for all latest releases
 
 ## Tech Stack
 
@@ -67,16 +70,17 @@ vercel
   - globals.css     # Global styles and Tailwind
 
 /components
-  - Navigation.tsx      # Main navigation bar
+  - Navigation.tsx      # Main navigation bar with projects dropdown
   - Hero.tsx            # Hero section with 3D stage canvas
   - StageCanvas.tsx     # Three.js scene container
   - StageLights.tsx     # Animated stage lights (kick drum synced)
   - ProjectionScreen.tsx # Central projection screen with text
   - StageFloor.tsx      # Stage platform and grid
+  - LatestTracks.tsx    # Latest tracks showcase with download functionality
   - SoundDesign.tsx     # Sound design portfolio section
   - ETU2175.tsx         # Explore the Universe 2175 OST section
   - ErosSeries.tsx      # Eros trilogy showcase
-  - Contact.tsx         # Contact and streaming links
+  - Contact.tsx         # Contact, streaming links, and external projects
   - AudioPlayer.tsx     # Floating audio player
 ```
 

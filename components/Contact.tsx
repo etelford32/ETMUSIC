@@ -82,6 +82,63 @@ export default function Contact() {
           </motion.div>
         </div>
 
+        {/* Other Projects */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="glass-morphism p-8 rounded-3xl mb-16"
+        >
+          <h3 className="text-2xl font-bold mb-6 text-center neon-text">Explore More Projects</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <motion.a
+              href="https://exploretheuniverse2175.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="neon-border p-6 rounded-xl text-center hover:bg-neon-blue/10 transition-all group"
+            >
+              <div className="text-5xl mb-4">🎮</div>
+              <div className="font-bold mb-2 group-hover:text-neon-blue transition-colors">
+                Explore the Universe 2175
+              </div>
+              <div className="text-sm text-gray-400">The Game</div>
+            </motion.a>
+
+            <motion.a
+              href="https://elliottelford.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="neon-border p-6 rounded-xl text-center hover:bg-neon-purple/10 transition-all group"
+            >
+              <div className="text-5xl mb-4">📝</div>
+              <div className="font-bold mb-2 group-hover:text-neon-purple transition-colors">
+                Elliot Telford Blog
+              </div>
+              <div className="text-sm text-gray-400">Insights & Updates</div>
+            </motion.a>
+
+            <motion.a
+              href="https://elliottelford-dotcom.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="neon-border p-6 rounded-xl text-center hover:bg-neon-pink/10 transition-all group"
+            >
+              <div className="text-5xl mb-4">🚀</div>
+              <div className="font-bold mb-2 group-hover:text-neon-pink transition-colors">
+                Telford Projects
+              </div>
+              <div className="text-sm text-gray-400">Company Website</div>
+            </motion.a>
+          </div>
+        </motion.div>
+
         {/* Newsletter/Contact Form */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
+import LatestTracks from '@/components/LatestTracks'
 import SoundDesign from '@/components/SoundDesign'
 import ETU2175 from '@/components/ETU2175'
 import ErosSeries from '@/components/ErosSeries'
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation />
       <Hero />
+      <LatestTracks />
       <SoundDesign />
       <ETU2175 />
       <ErosSeries />
