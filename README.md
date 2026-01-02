@@ -4,6 +4,7 @@ A futuristic digital distribution and marketing platform showcasing the musical 
 
 ## Features
 
+- **3D EDM Festival Stage**: Interactive Three.js concert stage with animated lights synced to kick drum (120 BPM)
 - **Futuristic Design**: Cyberpunk-inspired aesthetics with neon colors and smooth animations
 - **Sound Design Showcase**: Highlighting cinematic, game audio, and experimental sound work
 - **ETU 2175 OST**: Dedicated section for the Explore the Universe 2175 original soundtrack
@@ -11,12 +12,14 @@ A futuristic digital distribution and marketing platform showcasing the musical 
 - **Interactive Audio Player**: Built-in player with modern controls
 - **Responsive Design**: Optimized for all devices
 - **Smooth Animations**: Powered by Framer Motion for engaging interactions
+- **Projection Screen**: Central stage screen with animated text and pulsing effects
 
 ## Tech Stack
 
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
+- **3D Graphics**: Three.js with React Three Fiber & Drei
 - **Animations**: Framer Motion
 - **Font**: Orbitron (display), Inter (body)
 
@@ -41,6 +44,20 @@ npm run build
 npm start
 ```
 
+## Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone)
+
+1. Push your code to GitHub
+2. Import your repository in Vercel
+3. Vercel will automatically detect Next.js and deploy
+
+Or use the Vercel CLI:
+```bash
+npm install -g vercel
+vercel
+```
+
 ## Project Structure
 
 ```
@@ -50,13 +67,17 @@ npm start
   - globals.css     # Global styles and Tailwind
 
 /components
-  - Navigation.tsx  # Main navigation bar
-  - Hero.tsx        # Hero section with animated background
-  - SoundDesign.tsx # Sound design portfolio section
-  - ETU2175.tsx     # Explore the Universe 2175 OST section
-  - ErosSeries.tsx  # Eros trilogy showcase
-  - Contact.tsx     # Contact and streaming links
-  - AudioPlayer.tsx # Floating audio player
+  - Navigation.tsx      # Main navigation bar
+  - Hero.tsx            # Hero section with 3D stage canvas
+  - StageCanvas.tsx     # Three.js scene container
+  - StageLights.tsx     # Animated stage lights (kick drum synced)
+  - ProjectionScreen.tsx # Central projection screen with text
+  - StageFloor.tsx      # Stage platform and grid
+  - SoundDesign.tsx     # Sound design portfolio section
+  - ETU2175.tsx         # Explore the Universe 2175 OST section
+  - ErosSeries.tsx      # Eros trilogy showcase
+  - Contact.tsx         # Contact and streaming links
+  - AudioPlayer.tsx     # Floating audio player
 ```
 
 ## Customization

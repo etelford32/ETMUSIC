@@ -1,42 +1,26 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
+
+// Dynamically import StageCanvas to avoid SSR issues with Three.js
+const StageCanvas = dynamic(() => import('./StageCanvas'), {
+  ssr: false,
+  loading: () => (
+    <div className="absolute inset-0 bg-gradient-to-br from-dark-bg via-dark-surface to-dark-bg" />
+  ),
+})
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
+      {/* 3D Stage Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-bg via-dark-surface to-dark-bg" />
+        <div className="absolute inset-0 bg-dark-bg" />
+        <StageCanvas />
 
-        {/* Animated Grid */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(0, 240, 255, 0.3) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0, 240, 255, 0.3) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px',
-          }} />
-        </div>
-
-        {/* Glowing Orbs */}
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{ duration: 4, repeat: Infinity }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-blue/30 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{ duration: 5, repeat: Infinity }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/30 rounded-full blur-3xl"
-        />
+        {/* Gradient overlay to blend with page */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark-bg pointer-events-none" />
       </div>
 
       {/* Content */}
